@@ -1,0 +1,24 @@
+#Para cambiar nombre de una columna
+ALTER TABLE ventas_tabla RENAME COLUMN
+"Fecha De Venta" TO fecha_venta;
+
+Creando tabla de ventas
+
+CREATE TABLE ventas (
+  id INTEGER PRIMARY KEY,
+  fecha_venta DATE,
+  facturación REAL
+);
+
+Insertando datos a la tabla mes_anio
+
+INSERT INTO ventas_por_mes (mes_anio, total_facturado)
+SELECT strftime('%Y-%m', fecha_venta) AS mes_anio, 
+       SUM(Facturación) AS total_facturado
+FROM ventas_por_mes
+GROUP BY mes_anio;
+
+Eliminar los NULL de las columnas
+
+DELETE FROM ventas_por_mes
+WHERE Producto IS NULL OR ganancia_total IS NULL;
