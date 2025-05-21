@@ -12,6 +12,7 @@ Este proyecto consiste en un dashboard interactivo desarrollado en **Power BI**,
 - **Power Query**
 - **DAX** (para medidas y cálculos)
 - **Mapas de Bing** (para la visualización geográfica)
+- **SQL** (para consultas)
 
 ---
 
